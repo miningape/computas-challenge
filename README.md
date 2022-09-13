@@ -33,6 +33,7 @@ To start the application:
 - FILE to stdout: `yarn start input.txt` Reads `input.txt` and outputs the text shifted by 0 to the console. If `input.txt` does not exist the string `"input.txt"` is used instead.
 - FILE to file: `yarn start --from input.txt --to output.txt --offset 1` Writes the ciphered contents of `input.txt` to `output.txt` using an offset of 1.
 - ALPHABET: `yarn start "Hello, World!" --alphabet aeiou` Outputs `"Hillu, Wurld!"` to stdout. This is because only characters in the alphabet are ciphered, all other characters are passed directly to the output.
+- ALPHABET: `yarn start "Hello, World!" --alphabet vowels.txt` Same as above if `vowels.txt` contains only `aeiou`.
 
 ## Possible extensions
 
@@ -47,3 +48,5 @@ To start the application:
 - Checks for correct stream buffer type, i.e. not JPEG.
 - Unit tests.
 - Tests with non ANSI characters like emojis and Chinese characters
+- Tests on other operating systems: Tested on MacOS BigSur (M1) so may not work as expected on a Windows 11 PC with an AMD chip.
+- "Weird" "bug": If alphabet contains a newline the newline is also transformed.
