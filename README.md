@@ -1,6 +1,6 @@
 # Caesar Cipher
 
-This CLI application transforms strings by shifting their letters in the alphabet. See [https://en.wikipedia.org/wiki/Caesar_cipher](Wikipedia) for a more full description. This app can operate on stdin, stdout, files and strings, allowing for data to be `curl`ed `grep`ped and the ciphered all in one command.
+This CLI application transforms strings by shifting their letters in the alphabet. See (https://en.wikipedia.org/wiki/Caesar_cipher)[Wikipedia] for a more full description. This app can operate on stdin, stdout, files and strings, allowing for data to be `curl`ed `grep`ped and the ciphered all in one command.
 
 For example the string "Hello, World!" gets transformed into "Ifmmp, Xptme!" when an offset of 1 is used since a->b, b->c, etc. and since it is circular we get z->a. Note also that any characters not in the alphabet (`,` & `!`) are passed directly to the output without being transformed.
 
