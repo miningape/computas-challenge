@@ -34,6 +34,7 @@ To start the application:
 - FILE to file: `yarn start --from input.txt --to output.txt --offset 1` Writes the ciphered contents of `input.txt` to `output.txt` using an offset of 1.
 - ALPHABET: `yarn start "Hello, World!" --alphabet aeiou` Outputs `"Hillu, Wurld!"` to stdout. This is because only characters in the alphabet are ciphered, all other characters are passed directly to the output.
 - ALPHABET: `yarn start "Hello, World!" --alphabet vowels.txt` Same as above if `vowels.txt` contains only `aeiou`.
+- ENCRYPT/DECRYPT `yarn start "Hello, World!" -o 3 | yarn start -o -3` Prints `"Hello, World!"` to stdout since we cipher in one direction then in the opposite.
 
 ## Possible extensions
 
@@ -50,3 +51,4 @@ To start the application:
 - Tests with non ANSI characters like emojis and Chinese characters
 - Tests on other operating systems: Tested on MacOS BigSur (M1) so may not work as expected on a Windows 11 PC with an AMD chip.
 - "Weird" "bug": If alphabet contains a newline the newline is also transformed.
+- Bug where piping into the app multiple times causes the addidional output from `yarn` to be transformed (simple fix: use `node bin/` to run, actual fix: make into a standalone CLI application with no additional output.)
