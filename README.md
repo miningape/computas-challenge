@@ -27,7 +27,7 @@ To start the application:
 - REPL offset: `yarn start --offset 1`. Opens a REPL and encodes any input with an offset of 1 (i.e. "Hello, World!" becomes "Ifmmp, Xptme!")
 - REPL to file: `yarn start --offset 1 --to out.txt`. Opens a REPL and encodes any input with an offset of 1 into a file. Will make/clear the file once then insert text into the file as it appears in the REPL. You may have to close/open the file to see any live changes as file editors often cache the contents of a file.
 - PIPE: `echo "Hello, World!" | yarn start --offset 1` Prints "Ifmmp, Xptme!" to stdout then closes the app.
-- PIPE to file: `curl example.com | yarn start --from stdin --to out.txt` Writes the HTML source of [example.com](example.com) without ciphering to `out.txt` it then closes the app.
+- PIPE to file: `curl example.com | yarn start --from stdin --to out.txt` Writes the HTML source of [example.com](https://example.com) without ciphering to `out.txt` it then closes the app.
 - STRING: `yarn start --from "Hello, World!" --offset 1` Prints "Ifmmp, Xptme!" to stdout then closes the app since the source the data is from is the string "Hello, World!".
 - STRING: `yarn start "Hello, World!" --offset 1` Same as above since any value without a flag is assumed to be attached to the `--from` flag.
 - FILE to stdout: `yarn start input.txt` Reads `input.txt` and outputs the text shifted by 0 to the console. If `input.txt` does not exist the string `"input.txt"` is used instead.
@@ -38,7 +38,7 @@ To start the application:
 
 ## Possible extensions
 
-- Build a globally installed version that can be installed from `npm` and `yarn`. [https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs](See here).
+- Build a globally installed version that can be installed from `npm` and `yarn`. (https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs)[See here].
 - More default alphabets, for example only capital letters (`ABCDEFGHIJKLMNOPQRSTUVWXYZ`).
 - Option to throw on unrecognised characters.
 - Source to upper/lower case transform. Allowing a smaller subset of characters to be used.
