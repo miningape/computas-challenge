@@ -1,4 +1,5 @@
 import { Readable, Stream } from "stream";
+
 import { Source } from "./source.js";
 
 export class StringSource implements Source {

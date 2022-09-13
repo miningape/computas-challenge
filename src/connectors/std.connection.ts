@@ -1,7 +1,13 @@
 import { Stream } from "stream";
-import { Destination } from "./destination.js";
 
-export class StdoutDestination implements Destination {
+import { Destination } from "./destination.js";
+import { Source } from "./source.js";
+
+export class StdConnection implements Source, Destination {
+  async get(): Promise<Stream> {
+    return process.openStdin();
+  }
+
   write(stream: Stream): Promise<void> {
     return new Promise((resolve, reject) => {
       stream.pipe(process.stdout);

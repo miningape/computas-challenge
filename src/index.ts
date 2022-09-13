@@ -1,5 +1,5 @@
-import { getDestination } from "./destination/destination.js";
-import { getSource } from "./source/source.js";
+import { getDestination } from "./connectors/destination.js";
+import { getSource } from "./connectors/source.js";
 import { caesarCipherTransform } from "./transform/caesar.transform.js";
 import { getCliOptions } from "./misc/cli.options.js";
 import { showCliUsageGuide } from "./misc/cli.guide.js";
