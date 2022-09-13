@@ -1,6 +1,6 @@
 # Caesar Cipher
 
-This CLI application transforms strings by shifting their letters in the alphabet. See (https://en.wikipedia.org/wiki/Caesar_cipher)[Wikipedia] for a more full description. This app can operate on stdin, stdout, files and strings, allowing for data to be `curl`ed `grep`ped and the ciphered all in one command.
+This CLI application transforms strings by shifting their letters in the alphabet. See [Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher) for a more full description. This app can operate on stdin, stdout, files and strings, allowing for data to be `curl`ed `grep`ped and the ciphered all in one command.
 
 For example the string "Hello, World!" gets transformed into "Ifmmp, Xptme!" when an offset of 1 is used since a->b, b->c, etc. and since it is circular we get z->a. Note also that any characters not in the alphabet (`,` & `!`) are passed directly to the output without being transformed.
 
@@ -38,7 +38,7 @@ To start the application:
 
 ## Possible extensions
 
-- Build a globally installed version that can be installed from `npm` and `yarn`. (https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs)[See here].
+- Build a globally installed version that can be installed from `npm` and `yarn`. [See here](https://developer.okta.com/blog/2019/06/18/command-line-app-with-nodejs).
 - More default alphabets, for example only capital letters (`ABCDEFGHIJKLMNOPQRSTUVWXYZ`).
 - Option to throw on unrecognised characters.
 - Source to upper/lower case transform. Allowing a smaller subset of characters to be used.
