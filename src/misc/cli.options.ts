@@ -53,7 +53,7 @@ export const cliOptionDefinitions: (OptionDefinition & {
     alias: "a",
     description:
       "The cipher's alphabet. When provided it specifies which characters are swapped and to which letter. For example: `aeiou` will shift only the vowels.",
-    typeLabel: " {underline string}",
+    typeLabel: "{underline string} | {underline filepath}",
     defaultValue: "abcdefghijklmnopqrtsuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
     type: String,
   },
